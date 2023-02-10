@@ -432,7 +432,7 @@ html {
 
 
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 1000px) {
     body {
         padding: 0;
         margin: 0;
@@ -455,7 +455,7 @@ html {
     .name {
         color: black;
         position: static;
-        padding-top: 20rem;
+        padding-top: 22rem;
         text-align: center;
         font-size: 22px;
         letter-spacing: 5px;
@@ -609,6 +609,7 @@ html {
         font-size: 17px;
         line-height: 1.35;
         text-align: left;
+        text-align: center;
     }
 
     table#comp td:nth-child(1) ~ td {
@@ -628,6 +629,11 @@ html {
     .slider {
     }
 
+    #comp{
+        width: max-content;
+        margin: 0 auto;
+    }
+
 
     .slide-content{
         display: inline-block;
@@ -636,6 +642,7 @@ html {
         padding-left: 0rem;
         width: -webkit-fill-available;
         overflow-y: scroll;
+        text-align: left;
     }
 
 
