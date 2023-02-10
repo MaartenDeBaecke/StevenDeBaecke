@@ -495,6 +495,15 @@ html {
     flex-basis: 30%;
 }
 
+.image{
+    visibility: visible;
+}
+
+.image2{
+    visibility: hidden;
+    height: 0;
+}
+
 
 
 @media only screen and (max-width: 576px) {
@@ -562,71 +571,41 @@ html {
         padding:0 10px;
         height: 40px;
         color: #ffd796;
-        font-family: 'Lato', sans-serif;
-
         font-size: 21px;
         background-color: rgba(0,0,0,0.5);
         border: solid 2.2px !important;
-
     }
-
-    .cluster-btn:hover{
-        color: #eedcb1;
-        border-color: black;
-    }
-
-    .cluster-btn:active{
-        color: #ffecc1;
-        border-color: black;
-    }
-
 
     .about{
         width: 100vw;
-        height: 100vh;
+        height: auto;
+        margin-bottom: 4rem;
         background-color: white;
     }
 
 
     .about_card{
         position: relative;
-        top: -2rem;
+        top: 2rem;
         width: 80vw;
-        height: 85vh;
+        height: auto;
         background-color: white;
         margin: auto;
-        border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 38px, rgba(0, 0, 0, 0.22) 0px 10px 8px;
+        border-radius: 0px;
+        box-shadow: rgba(0, 0, 0, 0) 5px 10px 38px, rgba(0, 0, 0, 0) 0px 10px 8px;
         overflow: hidden;
-        column-count: 2;
-        display: flex;
+        column-count: 1;
+
+        display: inherit;
         align-items: left;
         justify-content: left;
     }
 
     .about-left{
         margin: 2rem 1rem;
-        overflow-y: scroll;
-    }
-
-    /* custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 20px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: #d6dee1;
-      border-radius: 20px;
-      border: 6px solid transparent;
-      background-clip: content-box;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: #a8bbbf;
+        overflow-y: visible;
+        display: inline;
+        height: auto;
     }
 
     .about-title{
@@ -638,63 +617,81 @@ html {
         font-size: 14.5px;
         width: auto;
         font-family: 'Source Serif Pro', serif;
-
+        height: auto;
     }
+
     .image{
-        flex-basis: 30%;
+        visibility: hidden;
+        height: 0;
     }
 
-    .about-img{
-        height: 100%;
-        position: relative;
-        left: -1rem;
+    .image2{
+        visibility: visible;
+        height: auto;
+        content: url("images/composer4.jpg");
+        width: 80vw;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 38px, rgba(0, 0, 0, 0) 0px 10px 8px;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
     }
 
 
     .music{
         width: 100vw;
-        height: auto;
-        height: 100vh;
+        height: 120vh
+        padding-top: 3rem;
         background: url("images/music.png") no-repeat;
         background-size: cover;
         background-position: bottom;
-        text-align: right;
+
+        text-align: left;
     }
 
     .left-panel{
-        height: 100vh;
-        width: auto;
+        width: 0;
+        height: 0;
         display: inline-block;
     }
 
     .right-panel{
         height: 100vh;
-        width: 40vw;
+        width: 100vw;
         display: inline-block !important;
-        min-width: 40vw;
         margin-right: 0;
+        min-width: 0;
     }
 
     .music-content{
-        width: 10vw;
-        height: auto;
-        top: -10vw;
-        position: relative;
-        background-color: #eeeeee;
-        border-radius: 20px;
-        padding: 25px;
-        padding-left: 30px;
-        box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 38px, rgba(0, 0, 0, 0.22) 0px 10px 8px;
-        font-family: 'Source Serif Pro', serif;
-        font-size: 17px;
-        line-height: 1.35;
+        width: 85vw;
+        height: 100vh;
+        position: static;
+        margin: auto;
+        border-radius: 5px;
+        padding: 5px;
+        padding-left: 5px;
+        padding-top: 15px;
+        font-size: 15px;
+        line-height: 1.6;
         text-align: left;
     }
 
-    td{
-        padding-right: 60px;
+    table#comp td:nth-child(1) ~ td {
+      display: none;
     }
 
+    td{
+        padding-right: 0px;
+    }
+
+    ul{
+        list-style-type: none;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+    }
 
     .slider {
       overflow: hidden;
@@ -715,7 +712,7 @@ html {
       background: #eee;
 
       position: relative;
-      width: 80vw;
+      width: 85vw;
       display: flex;
     }
 
@@ -748,10 +745,18 @@ html {
 
     .slide-content{
         display: inline-block;
-        height: auto;
-        margin: auto;
-        padding-left: 2rem;
+        height: 100vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0rem;
     }
+
+    .compositions{
+        text-align: center;
+        font-size: 24px;
+        padding-top: 10px;
+    }
+
 
 
     .next {
@@ -810,9 +815,6 @@ html {
     }
 
 
-    .compositions{
-        text-align: center;
-    }
 
     .contact{
         width: 100vw;
