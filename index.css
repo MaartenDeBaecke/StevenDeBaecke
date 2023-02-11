@@ -183,13 +183,15 @@ p {
     height: 100%;
     position: relative;
     left: -1rem;
+    max-width: 37vw;
+
 }
 
 
 .music{
     width: 100vw;
     height: 100vh;
-    background: url("images/music.png") no-repeat;
+    background: url("images/music-min.png") no-repeat;
     background-size: cover;
     background-position: bottom;
     text-align: right;
@@ -565,6 +567,7 @@ html {
         width: 80vw;
         border-radius: 10px;
         left: 0;
+        max-width: 80vw;
     }
 
 
